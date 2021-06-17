@@ -1,0 +1,78 @@
+<?php
+
+namespace Stimulsoft\Viewer;
+
+class Appearance extends \Stimulsoft\OptionsBase
+{
+	protected static $validFields = array(
+		'allowTouchZoom' => 'boolean',
+		'backgroundColor' => 'Stimulsoft\\Viewer\\Color',
+		'bookmarksPrint' => 'boolean',
+		'bookmarksTreeWidth' => 'integer',
+		'chartRenderType' =>  array('', 2 => 'Vector', 3 => 'AnimatedVector'),
+		'combineReportPages' => 'boolean',
+		'datePickerFirstDayOfWeek' => array('Auto', 'Monday', 'Sunday'),
+		'datePickerIncludeCurrentDayForRanges' => 'boolean',
+		'fullScreenMode' => 'boolean',
+		'htmlRenderMode' => 'integer',
+		'interfaceType' => array('Auto', 'Mouse', 'Touch', 'Mobile'),
+		'openExportedReportWindow' => 'string',
+		'openLinksWindow' => 'string',
+		'pageAlignment' => array('Left', 'Center', 'Right', 'Default'),
+		'pageBorderColor' => 'Stimulsoft\\Viewer\\Color',
+		'parametersPanelColumnsCount' => 'integer',
+		'parametersPanelDateFormat' => 'string',
+		'parametersPanelMaxHeight' => 'integer',
+		'parametersPanelPosition' => 'integer',
+		'parametersPanelSortDataItems' => 'boolean',
+		'reportDisplayMode' => 'integer',
+		'rightToLeft' => 'boolean',
+		'scrollbarsMode' => 'boolean',
+		'showDialogsHelp' => 'boolean',
+		'showPageShadow' => 'boolean',
+		'showTooltips' => 'boolean',
+		'showTooltipsHelp' => 'boolean',
+	);
+
+	protected static $defaults = array(
+		'allowTouchZoom' => true,
+		'backgroundColor' => array(
+			'name' => 'White',
+			'_a' => 255,
+			'_r' => 255,
+			'_g' => 255,
+			'_b' => 255,
+		),
+		'bookmarksPrint' => false,
+		'bookmarksTreeWidth' => 180,
+		'chartRenderType' => 3,
+		'combineReportPages' => false,
+		'datePickerFirstDayOfWeek' => 0,
+		'datePickerIncludeCurrentDayForRanges' => false,
+		'fullScreenMode' => false,
+		'htmlRenderMode' => 3,
+		'interfaceType' => 0,
+		'openExportedReportWindow' => '_blank',
+		'openLinksWindow' => '_blank',
+		'pageAlignment' => 1,
+		'pageBorderColor' => array(
+			'name' => 'Gray',
+			'_a' => 255,
+			'_r' => 128,
+			'_g' => 128,
+			'_b' => 128,
+		),
+		'parametersPanelColumnsCount' => 2,
+		'parametersPanelDateFormat' => '',
+		'parametersPanelMaxHeight' => 300,
+		'parametersPanelPosition' => 0,
+		'parametersPanelSortDataItems' => false,
+		'reportDisplayMode' => 3,
+		'rightToLeft' => false,
+		'scrollbarsMode' => false,
+		'showDialogsHelp' => true,
+		'showPageShadow' => false,
+		'showTooltips' => true,
+		'showTooltipsHelp' => true,
+	);
+}
